@@ -135,6 +135,7 @@ Final Inference: Critical rules failed → REJECT CLAIM
 | Name | Register Number |
 |------|-----------------|
 | Member 1 | RA2411026050169 |
+| Member 1 | RA2411026050151 |
 
 ---
 
