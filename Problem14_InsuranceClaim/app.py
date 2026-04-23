@@ -707,7 +707,11 @@ else:
             return "background-color: #450a0a; color: #fca5a5;"
         return ""
 
-    styled_df = df.style.applymap(color_status, subset=["Status"])
+    # Use .map() for pandas ≥ 2.1.0; fall back to .applymap() for older versions
+    try:
+        styled_df = df.style.map(color_status, subset=["Status"])
+    except AttributeError:
+        styled_df = df.style.applymap(color_status, subset=["Status"])
     st.dataframe(styled_df, use_container_width=True, hide_index=True)
 
     st.markdown("<hr>", unsafe_allow_html=True)
