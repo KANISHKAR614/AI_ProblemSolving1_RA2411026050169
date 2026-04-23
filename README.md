@@ -63,8 +63,7 @@ streamlit run app.py
 
 ### Step 4 — Open in Browser
 
-http://localhost:8501
-
+claimora.streamlit.app
 ### requirements.txt
 
 streamlit
